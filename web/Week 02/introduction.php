@@ -8,7 +8,7 @@
 	<h1>Welcome to Domenick's Personal Page!</h1>
 
 	<?php
-	echo "<h3> Today is " . date("m/d/Y") . "</h3><br>";
+	echo "<h3> Today is " . date("m/d/Y") . "</h3>";
 	echo "<h3> Today is " . date("l") . "</h3>";
 	?>
 
