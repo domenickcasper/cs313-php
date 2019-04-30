@@ -8,7 +8,7 @@
 	<h1>Welcome to Domenick's Personal Page!</h1>
 
 	<?php
-	echo "Today is " . date("Y/m/d") . "<br>"
+	echo "<h3> Today is " . date("Y/m/d") . "</h3><br>"
 	?>
 
 	<div class = "topnav">
