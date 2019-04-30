@@ -9,7 +9,7 @@
 
 	<?php
 	echo "<h3> Today is " . date("m/d/Y") . "</h3><br>";
-	echo "<h3> Today is " . date("l") . "</h3>;
+	echo "<h3> Today is " . date("l") . "</h3>";
 	?>
 
 	<div class = "topnav">
