@@ -1,0 +1,26 @@
+#one {
+	font-size: 50px;
+	background-color: red;
+}
+
+#one:hover {
+	font-weight: bold;
+}
+
+#two {
+	font-size: 25px;
+	background-color: orange;
+}
+
+#two:hover {
+	font-weight: bold;
+}
+
+#three {
+	font-size: 15px;
+	background-color: yellow;
+}
+
+#three:hover {
+	font-weight: bold;
+}
