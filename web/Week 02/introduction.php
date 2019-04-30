@@ -8,11 +8,12 @@
 	<h1>Welcome to Domenick's Personal Page!</h1>
 
 	<?php
-	echo "<h3> Today is " . date("Y/m/d") . "</h3><br>"
+	echo "<h3> Today is " . date("m/d/Y") . "</h3><br>";
+	echo "Today is " . date("l");
 	?>
 
 	<div class = "topnav">
-		<a class="active" href="./introduction.html">Home</a>
+		<a class="active" href="./introduction.php">Home</a>
 		<a href="./assignments.html">Assignments</a>
 	</div>
 
