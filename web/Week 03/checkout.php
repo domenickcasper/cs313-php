@@ -8,10 +8,10 @@
 	<h1>Checkout</h1>
 	<div class = "topnav">
 		<a class="active" href="./assignments.html">Assignments</a>
-		<a href="./browse.html">Browse</a>
-		<a href="./viewcart.html">View Cart</a>
-		<a href="./checkout.html">Checkout</a>
-		<a href="./confirmation.html">Confirmation</a>
+		<a href="./browse.php">Browse</a>
+		<a href="./viewcart.php">View Cart</a>
+		<a href="./checkout.php">Checkout</a>
+		<a href="./confirmation.php">Confirmation</a>
 	</div>
 </body>
 </html>
