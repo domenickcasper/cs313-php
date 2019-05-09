@@ -9,6 +9,11 @@ h1 {
 	color: white;
 }
 
+form {
+    font-family: courier;
+    font-size: 40px;
+    color: white;
+}
 /*a:link {
     text-decoration: none;
 	color: white;

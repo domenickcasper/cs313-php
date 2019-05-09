@@ -14,16 +14,16 @@
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
-	<form action="checkout.php" method="post">
-		<input type="checkbox" name="item1" value="borderlands">Borderlands<br>
-		<input type="checkbox" name="item2" value="overwatch">Overwatch<br>
-		<input type="checkbox" name="item3" value="left4dead">Left 4 Dead<br>
-		<input type="checkbox" name="item4" value="half-life">Half-Life<br>
-		<input type="checkbox" name="item5" value="portal">Portal<br>
-		<input type="checkbox" name="item6" value="halo">Halo<br>
-		<input type="checkbox" name="item7" value="kingdomhearts">Kingdom Hearts<br>
-		<input type="checkbox" name="item8" value="pokemon">Pokemon<br>
-		<input type="checkbox" name="item9" value="zelda">Legend of Zelda Breath of the Wild<br>
+	<form action="viewcart.php" method="post">
+		<input type="checkbox" name="item[]" value="borderlands, 20">Borderlands<br>
+		<input type="checkbox" name="item[]" value="overwatch, 20">Overwatch<br>
+		<input type="checkbox" name="item[]" value="left4dead, 10">Left 4 Dead<br>
+		<input type="checkbox" name="item[]" value="half-life, 10">Half-Life<br>
+		<input type="checkbox" name="item[]" value="portal, 10">Portal<br>
+		<input type="checkbox" name="item[]" value="halo, 15">Halo<br>
+		<input type="checkbox" name="item[]" value="kingdomhearts, 20">Kingdom Hearts<br>
+		<input type="checkbox" name="item[]" value="pokemon, 20">Pokemon<br>
+		<input type="checkbox" name="item[]" value="zelda, 20">Legend of Zelda Breath of the Wild<br>
 
 		<input type="submit" name="Submit">
 	</form>

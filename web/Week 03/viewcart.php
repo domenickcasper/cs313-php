@@ -13,5 +13,14 @@
 		<a href="./checkout.php">Checkout</a>
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
+
+	Items you wish to Purchase:<br><?php
+
+	$items = $_POST["item"];
+	foreach ($items as $val){
+    echo "<b>". $cont[$val]."<b>"."<br>";
+}
+
+	?>
 </body>
 </html>
