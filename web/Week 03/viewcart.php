@@ -5,9 +5,6 @@ if (isset($_POST)) {
 	$selected = $_POST["remove"];
 	unset($_SESSION[$selected]);
 	}
-
-var_dump($_SESSION);
-}
 ?>
 <!DOCTYPE html>
 <html>
