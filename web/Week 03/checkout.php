@@ -18,10 +18,10 @@ session_start();
 	</div>
 
 <?php
-	$address = $_POST["street"];
-	$city = $_POST["city"];
-	$state = $_POST["state"];
-	$zip = $_POST["zip"];
+	$address = htmlspecialchars($_POST["street"]);
+	$city = htmlspecialchars($_POST["city"]);
+	$state = htmlspecialchars($_POST["state"]);
+	$zip = htmlspecialchars($_POST["zip"]);
 ?>
 
 <form action = "./confirmation.php" method="post">

@@ -17,6 +17,7 @@ session_start();
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
+<h1> What you just bought </h1>
 	<form action="confirmation.php" method="post">
 	<?php
 			if (isset($_SESSION["Borderlands"])) {
