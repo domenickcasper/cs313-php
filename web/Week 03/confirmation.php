@@ -17,9 +17,14 @@ session_start();
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
-	<h3> Customer: </h3>
+	<h1> Customer: </h1>
 	<?php
-		echo ("$name <br /> $address <br /> $city, $state $zip <br />");
+	$name = $_POST["fname"];
+	$address = $_POST["street"];
+	$city = $_POST["city"];
+	$state = $_POST["state"];
+	$zip = $_POST["zip"];
+	echo ("$name <br /> $address <br /> $city, $state $zip <br />");
 	?>
 </body>
 </html>
