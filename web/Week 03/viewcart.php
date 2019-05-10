@@ -10,7 +10,6 @@ if (isset($_POST)) {
 		}
 		$count++;
 	}
-	$_SESSION["items"] = $items;
 
 }
 ?>
