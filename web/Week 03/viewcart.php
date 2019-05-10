@@ -11,6 +11,7 @@ if (isset($_POST)) {
 		$count++;
 	}
 
+var_dump($_SESSION);
 }
 ?>
 <!DOCTYPE html>
