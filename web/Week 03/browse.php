@@ -23,15 +23,15 @@ if (isset($_POST)) {
 	</div>
 
 	<form action="browse.php" method="post">
-		<input type="checkbox" name="item[]" value="borderlands, 20">Borderlands<br>
-		<input type="checkbox" name="item[]" value="overwatch, 20">Overwatch<br>
-		<input type="checkbox" name="item[]" value="left4dead, 10">Left 4 Dead<br>
-		<input type="checkbox" name="item[]" value="half-life, 10">Half-Life<br>
-		<input type="checkbox" name="item[]" value="portal, 10">Portal<br>
-		<input type="checkbox" name="item[]" value="halo, 15">Halo<br>
-		<input type="checkbox" name="item[]" value="kingdomhearts, 20">Kingdom Hearts<br>
-		<input type="checkbox" name="item[]" value="pokemon, 20">Pokemon<br>
-		<input type="checkbox" name="item[]" value="zelda, 20">Legend of Zelda Breath of the Wild<br>
+		<input type="checkbox" name="item[]" value="Borderlands">Borderlands<br>
+		<input type="checkbox" name="item[]" value="Overwatch">Overwatch<br>
+		<input type="checkbox" name="item[]" value="Left 4 Dead">Left 4 Dead<br>
+		<input type="checkbox" name="item[]" value="Half-Life">Half-Life<br>
+		<input type="checkbox" name="item[]" value="Portal">Portal<br>
+		<input type="checkbox" name="item[]" value="Halo">Halo<br>
+		<input type="checkbox" name="item[]" value="Kingdom Hearts">Kingdom Hearts<br>
+		<input type="checkbox" name="item[]" value="Pokemon">Pokemon<br>
+		<input type="checkbox" name="item[]" value="Zelda: Breath of the Wild">Legend of Zelda Breath of the Wild<br>
 
 		<input type="submit" name="Submit">
 	</form>

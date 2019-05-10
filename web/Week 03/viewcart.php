@@ -1,9 +1,6 @@
 <?php
 session_start();
-
-echo "<h1>" . var_dump($_SESSION["items"]) . "</h1>";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +18,14 @@ echo "<h1>" . var_dump($_SESSION["items"]) . "</h1>";
 	</div>
 
 	<h1>Items you wish to Purchase:<br> <h1>
-
+<form>
 	<?php
 		foreach ($_SESSION["items"] as $key) {
-			echo "<h1>" . $key . "</h1>";
+			echo "<h1>" . $key . "</h1>" . "<input type = 'submit' name = 'remove' value = 'Remove "
+			. $key . " ' >" ;
 		}
 	?>
-
+</form>
 
 </body>
 </html>
