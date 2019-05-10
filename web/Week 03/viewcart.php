@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+echo "<h1>" . $_SESSION["items"] . "</h1>";
 ?>
 
 <!DOCTYPE html>
