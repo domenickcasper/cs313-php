@@ -3,7 +3,9 @@ session_start();
 
 if (isset($_POST)) {
 	$items = $_POST["item"];
-	$_SESSION["items"] = $items;
+	foreach ($items as $key) {
+		$_SESSION[$key] = 1;
+	}
 }
 ?>
 <!DOCTYPE html>

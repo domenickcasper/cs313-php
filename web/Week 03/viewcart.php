@@ -2,15 +2,8 @@
 session_start();
 
 if (isset($_POST)) {
-	$count = 0;
 	$selected = $_POST["remove"];
-	foreach ($_SESSION["items"] as $key) {
-		if ($selected == $key) {
-			unset($_SESSION["items"][$count]);
-			$tempvar = $_SESSION["items"];
-			$_SESSION["items"] = $tempvar;
-		}
-		$count++;
+	unset($_SESSION[$selected]);
 	}
 
 var_dump($_SESSION);
@@ -35,9 +28,9 @@ var_dump($_SESSION);
 	<h1>Items you wish to Purchase:<br> <h1>
 <form action="viewcart.php" method="post">
 	<?php
-		foreach ($_SESSION["items"] as $key) {
-			echo "<h1>" . $key . "</h1>" . "<button type = 'submit' name = 'remove' value = '"
-			. $key . "' > Remove " . $key . "</button> ";
+			if (isset($_SESSION["Borderlands"])) {
+				echo "<h1>Borderlands</h1>" . "<button type = 'submit' name = 'remove' value = 'Borderlands'>Remove Borderlands</button>";
+			}
 		}
 	?>
 </form>
