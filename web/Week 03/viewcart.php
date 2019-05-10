@@ -7,6 +7,8 @@ if (isset($_POST)) {
 	foreach ($_SESSION["items"] as $key) {
 		if ($selected == $key) {
 			unset($_SESSION["items"][$count]);
+			$tempvar = $_SESSION["items"];
+			$_SESSION["items"] = $tempvar;
 		}
 		$count++;
 	}
