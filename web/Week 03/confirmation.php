@@ -16,5 +16,10 @@ session_start();
 		<a href="./checkout.php">Checkout</a>
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
+
+	<h3> Customer: </h3>
+	<?php
+		echo ("$name <br /> $address <br /> $city, $state $zip <br />");
+	?>
 </body>
 </html>
