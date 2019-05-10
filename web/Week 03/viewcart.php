@@ -28,7 +28,6 @@ if (isset($_POST)) {
 			if (isset($_SESSION["Borderlands"])) {
 				echo "<h1>Borderlands</h1>" . "<button type = 'submit' name = 'remove' value = 'Borderlands'>Remove Borderlands</button>";
 			}
-		}
 	?>
 </form>
 
