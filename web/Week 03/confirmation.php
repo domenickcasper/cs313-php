@@ -53,10 +53,10 @@ session_start();
 
 	<h1> Customer: </h1>
 	<?php
-	$address = $_POST["street"];
-	$city = $_POST["city"];
-	$state = $_POST["state"];
-	$zip = $_POST["zip"];
+	$address = htmlspecialchars($_POST["street"]);
+	$city = htmlspecialchars($_POST["city"]);
+	$state = htmlspecialchars($_POST["state"]);
+	$zip = htmlspecialchars($_POST["zip"]);
 	echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1><br />");
 	?>
 </body>
