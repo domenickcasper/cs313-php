@@ -22,6 +22,12 @@ echo "<h1>" . var_dump($_SESSION["items"]) . "</h1>";
 
 	<h1>Items you wish to Purchase:<br> <h1>
 
+	<?php
+		foreach ($_SESSION["items"] as $key) {
+			echo "<h1>" . $key . "</h1>";
+		}
+	?>
+
 
 </body>
 </html>
