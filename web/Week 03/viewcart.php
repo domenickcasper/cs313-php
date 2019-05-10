@@ -1,5 +1,18 @@
 <?php
 session_start();
+
+if (isset($_POST)) {
+	$count = 0;
+	$selected = $_POST["remove"];
+	foreach ($_SESSION["items"] as $key) {
+		if ($selected == $key) {
+			unset($_SESSION["items"][$count])
+		}
+		$count++;
+	}
+	$_SESSION["items"] = $items;
+
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,11 +31,11 @@ session_start();
 	</div>
 
 	<h1>Items you wish to Purchase:<br> <h1>
-<form>
+<form action="viewcart.php" method="post">
 	<?php
 		foreach ($_SESSION["items"] as $key) {
-			echo "<h1>" . $key . "</h1>" . "<input type = 'submit' name = 'remove' value = 'Remove "
-			. $key . " ' >" ;
+			echo "<h1>" . $key . "</h1>" . "<button type = 'submit' name = 'remove' value = '"
+			. $key . "' > Remove " . $key . "</button> ";
 		}
 	?>
 </form>
