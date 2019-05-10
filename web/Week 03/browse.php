@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST)) {
 	$items = $_POST["item"];
 	foreach ($items as $val){
-	echo "<b>". $cont[$val]."<b>"."<br>";
+	echo "<h1>". $val . "</h1>" . "<br>";
 	}
 }
 ?>
