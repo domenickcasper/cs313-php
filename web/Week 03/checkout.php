@@ -24,27 +24,24 @@ session_start();
 	$zip = $_POST["zip"];
 ?>
 
-<div>
-	Address: 
-	<input type="text" name="street" size="35" placeholder="Full Address"><br>
-</div>
-<div>
-	City: 
-	<input type="text" name="city" size="20" placeholder="ex. San Jose"><br>
-</div>
-<div>
-	State: 
-	<input type="text" name="state" size="10" placeholder="ex. CA"><br>
-</div>
-<div>
-	ZIP: 
-	<input type="text" name="zip" size="5" placeholder="ex. 95124"><br>
-</div>
-
 <form action = "./confirmation.php" method="post">
-
+	<div>
+		Address: 
+		<input type="text" name="street" size="35" placeholder="Full Address"><br>
+	</div>
+	<div>
+		City: 
+		<input type="text" name="city" size="20" placeholder="ex. San Jose"><br>
+	</div>
+	<div>
+		State: 
+		<input type="text" name="state" size="10" placeholder="ex. CA"><br>
+	</div>
+	<div>
+		ZIP: 
+		<input type="text" name="zip" size="5" placeholder="ex. 95124"><br>
+	</div>
 	<input type = "submit" name = "submit"  value = "Confirm Order">
-
 </form>
 </body>
 </html>
