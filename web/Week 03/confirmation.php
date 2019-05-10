@@ -57,9 +57,9 @@ session_start();
 	$city = htmlspecialchars($_POST["city"]);
 	$state = htmlspecialchars($_POST["state"]);
 	$zip = htmlspecialchars($_POST["zip"]);
-	if (isset($_SESSION[$address] && isset($_SESSION[$city] && isset($_SESSION[$state] && isset($_SESSION[$zip] && )) {
-		echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1><br />");
-	}
+	echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1><br />");
+
+
 	?>
 </body>
 </html>
