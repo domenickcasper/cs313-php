@@ -6,7 +6,7 @@ if (isset($_POST)) {
 	$selected = $_POST["remove"];
 	foreach ($_SESSION["items"] as $key) {
 		if ($selected == $key) {
-			unset($_SESSION["items"][$count])
+			unset($_SESSION["items"][$count]);
 		}
 		$count++;
 	}
