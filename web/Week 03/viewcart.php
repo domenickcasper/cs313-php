@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,13 +18,8 @@
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
-	Items you wish to Purchase:<br><?php
+	<h1>Items you wish to Purchase:<br> <h1>
 
-	$items = $_POST["item"];
-	foreach ($items as $val){
-    echo "<b>". $cont[$val]."<b>"."<br>";
-}
 
-	?>
 </body>
 </html>

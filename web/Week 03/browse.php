@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_POST)) {
+	$items = $_POST["item"];
+	foreach ($items as $val){
+	echo "<b>". $cont[$val]."<b>"."<br>";
+	}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +24,7 @@
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
-	<form action="viewcart.php" method="post">
+	<form action="browse.php" method="post">
 		<input type="checkbox" name="item[]" value="borderlands, 20">Borderlands<br>
 		<input type="checkbox" name="item[]" value="overwatch, 20">Overwatch<br>
 		<input type="checkbox" name="item[]" value="left4dead, 10">Left 4 Dead<br>
@@ -27,5 +37,7 @@
 
 		<input type="submit" name="Submit">
 	</form>
+
+
 </body>
 </html>
