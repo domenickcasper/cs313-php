@@ -51,13 +51,13 @@ session_start();
 </form>
 
 
-	<h1> Customer: </h1>
+	<h1> Shipping Address: </h1>
 	<?php
 	$address = htmlspecialchars($_POST["street"]);
 	$city = htmlspecialchars($_POST["city"]);
 	$state = htmlspecialchars($_POST["state"]);
 	$zip = htmlspecialchars($_POST["zip"]);
-	echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1><br />");
+	echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1>");
 
 
 	?>
