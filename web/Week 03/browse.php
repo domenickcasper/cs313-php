@@ -17,7 +17,7 @@ if (isset($_POST)) {
 <body>
 	<h1>Browse</h1>
 	<div class = "topnav">
-		<a class="active" href="././Week%2002/assignments.html">Assignments</a>
+		<a class="active" href="../Week%2002/assignments.html">Assignments</a>
 		<a href="./browse.php">Browse</a>
 		<a href="./viewcart.php">View Cart</a>
 		<a href="./checkout.php">Checkout</a>
