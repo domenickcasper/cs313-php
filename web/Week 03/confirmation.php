@@ -17,7 +17,7 @@ session_start();
 		<a href="./confirmation.php">Confirmation</a>
 	</div>
 
-<h1> What you just bought </h1>
+<h1>Your Items:</h1>
 	<form action="confirmation.php" method="post">
 	<?php
 			if (isset($_SESSION["Borderlands"])) {
@@ -51,7 +51,7 @@ session_start();
 </form>
 
 
-	<h1> Shipping Address: </h1>
+	<br><br><h1> Shipping Address: </h1>
 	<?php
 	$address = htmlspecialchars($_POST["street"]);
 	$city = htmlspecialchars($_POST["city"]);
