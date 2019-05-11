@@ -1,0 +1,56 @@
+body {
+	background-color: #34519d;
+}
+
+h1 {
+	font-family: courier;
+	font-size: 40px;
+	text-align: center;
+	color: white;
+}
+
+/*a:link {
+    text-decoration: none;
+	color: white;
+}
+
+a:visited {
+    text-decoration: none;
+	color: white;
+}
+
+a:hover {
+    text-decoration: none;
+	color: white;
+}
+
+a:active {
+    text-decoration: none;
+	color: white;
+}*/
+
+.topnav {
+	overflow: hidden;
+	background-color: skyblue;
+	font-family: courier;
+	text-transform: uppercase;
+}
+
+.topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 16px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.topnav a:hover {
+	background-color: grey;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: royalblue;
+	color: black;
+}
