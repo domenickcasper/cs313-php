@@ -21,31 +21,31 @@ session_start();
 	<form action="confirmation.php" method="post">
 	<?php
 			if (isset($_SESSION["Borderlands"])) {
-				echo "<h1>Borderlands</h1>" . "<button type = 'submit' name = 'remove' value = 'Borderlands'>Remove Borderlands</button>";
+				echo "<h1>Borderlands</h1>";
 			}
 			if (isset($_SESSION["Overwatch"])) {
-				echo "<h1>Overwatch</h1>" . "<button type = 'submit' name = 'remove' value = 'Overwatch'>Remove Overwatch</button>";
+				echo "<h1>Overwatch</h1>";
 			}
 			if (isset($_SESSION["Left 4 Dead"])) {
-				echo "<h1>Left 4 Dead</h1>" . "<button type = 'submit' name = 'remove' value = 'Left 4 Dead'>Remove Left 4 Dead</button>";
+				echo "<h1>Left 4 Dead</h1>";
 			}
 			if (isset($_SESSION["Half-Life"])) {
-				echo "<h1>Half-Life</h1>" . "<button type = 'submit' name = 'remove' value = 'Half-Life'>Remove Half-Life</button>";
+				echo "<h1>Half-Life</h1>";
 			}
 			if (isset($_SESSION["Portal"])) {
-				echo "<h1>Portal</h1>" . "<button type = 'submit' name = 'remove' value = 'Portal'>Remove Portal</button>";
+				echo "<h1>Portal</h1>";
 			}
 			if (isset($_SESSION["Halo"])) {
-				echo "<h1>Halo</h1>" . "<button type = 'submit' name = 'remove' value = 'Halo'>Remove Halo</button>";
+				echo "<h1>Halo</h1>";
 			}
 			if (isset($_SESSION["Kingdom Hearts"])) {
-				echo "<h1>Kingdom Hearts</h1>" . "<button type = 'submit' name = 'remove' value = 'Kingdom Hearts'>Remove Kingdom Hearts</button>";
+				echo "<h1>Kingdom Hearts</h1>";
 			}
 			if (isset($_SESSION["Pokemon"])) {
-				echo "<h1>Pokemon</h1>" . "<button type = 'submit' name = 'remove' value = 'Pokemon'>Remove Pokemon</button>";
+				echo "<h1>Pokemon</h1>";
 			}
 			if (isset($_SESSION["Zelda: Breath of the Wild"])) {
-				echo "<h1>Zelda: Breath of the Wild</h1>" . "<button type = 'submit' name = 'remove' value = 'Zelda: Breath of the Wild'>Remove Zelda: Breath of the Wild</button>";
+				echo "<h1>Zelda: Breath of the Wild</h1>";
 			}
 	?>
 </form>
