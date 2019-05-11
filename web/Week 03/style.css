@@ -16,26 +16,6 @@ form {
     color: white;
 }
 
-/*a:link {
-    text-decoration: none;
-	color: white;
-}
-
-a:visited {
-    text-decoration: none;
-	color: white;
-}
-
-a:hover {
-    text-decoration: none;
-	color: white;
-}
-
-a:active {
-    text-decoration: none;
-	color: white;
-}*/
-
 .topnav {
 	overflow: hidden;
 	background-color: skyblue;
@@ -44,7 +24,7 @@ a:active {
 }
 
 .topnav a {
-	float: left;
+	float: center;
 	color: black;
 	text-align: center;
 	padding: 16px 16px;
