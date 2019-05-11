@@ -59,7 +59,6 @@ session_start();
 	$zip = htmlspecialchars($_POST["zip"]);
 	echo ("<h1>$name <br /> $address <br /> $city, $state $zip </h1>");
 
-
 	?>
 </body>
 </html>
