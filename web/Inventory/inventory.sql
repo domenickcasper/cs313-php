@@ -78,3 +78,58 @@ INSERT INTO console
 , ('XBOX ONE')
 , ('NINTEDO SWITCH')
 , ('COMPUTER');
+
+
+INSERT INTO genre
+(genre, media) VALUES
+('ACTION', 0)
+, ('ADVENTURE', 0)
+, ('ANIMATION', 0)
+, ('COMEDY', 0)
+, ('CRIME', 0)
+, ('DRAMA', 0)
+, ('FANTASY', 0)
+, ('HISTORICAL', 0)
+, ('HORROR', 0)
+, ('LIVE ACTION', 0)
+, ('MYSTERY', 0)
+, ('POLITICAL', 0)
+, ('ROMANCE', 0)
+, ('SAGA', 0)
+, ('SCIENCE FICTION', 0)
+, ('SOCIAL', 0)
+, ('THRILLER', 0);
+
+INSERT INTO genre
+(genre, media) VALUES
+('ARCADE', 1)
+, ('SHOOTER', 1)
+, ('STRATEGY', 1)
+, ('MUSICAL', 1)
+, ('SIMULATION', 1)
+, ('PUZZLE', 1)
+, ('PARTY', 1)
+, ('PLATFORM', 1)
+, ('FIGHTING', 1)
+, ('RACING', 1)
+, ('RPG', 1)
+, ('SPORTS', 1)
+, ('SURVIVAL', 1)
+, ('STEALTH', 1);
+
+INSERT INTO genre
+(genre, media) VALUES
+('ALTERNATIVE', 2)
+, ('COUNTRY', 2)
+, ('CLASSICAL', 2)
+, ('FOLK', 2)
+, ('FUNK', 2)
+, ('GOSPEL', 2)
+, ('HIP HOP', 2)
+, ('JAZZ', 2)
+, ('OPERA', 2)
+, ('POP', 2)
+, ('REGGAE', 2)
+, ('ROCK', 2)
+, ('ROMANTIC', 2);
+
