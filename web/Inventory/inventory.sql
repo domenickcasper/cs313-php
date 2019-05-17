@@ -133,3 +133,21 @@ INSERT INTO genre
 , ('ROCK', 2)
 , ('ROMANTIC', 2);
 
+INSERT INTO rating
+(rating, media) VALUES
+('G', 0)
+, ('PG', 0)
+, ('PG-13', 0)
+, ('R', 0)
+, ('NC-17', 0);
+
+INSERT INTO rating
+(rating, media) VALUES
+('E', 1)
+, ('E 10+', 1)
+, ('T', 1)
+, ('M', 1)
+, ('A', 1);
+
+
+
