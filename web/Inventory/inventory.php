@@ -30,6 +30,16 @@ foreach ($db->query('SELECT id, genre FROM genre WHERE media = 0') as $row)
 ?>
 </select>
 
+<!-- -->
+<select name="movieRating">
+<?php
+foreach ($db->query('SELECT id, rating FROM rating WHERE media = 0') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
+	}
+?>
+</select>
+
 <p>Video Games</p>
 <select name="console">
 <?php
@@ -46,6 +56,16 @@ foreach ($db->query('SELECT id, console FROM console') as $row)
 foreach ($db->query('SELECT id, genre FROM genre WHERE media = 1') as $row)
 	{
   	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+	}
+?>
+</select>
+
+<!-- -->
+<select name="vgRating">
+<?php
+foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
 	}
 ?>
 </select>
