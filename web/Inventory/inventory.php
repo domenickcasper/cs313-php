@@ -9,7 +9,7 @@ session_start();
 	<title>INVENTORY</title>
 </head>
 <body>
-
+<form method="GET" action="inventory.php">
 <p>Movies</p>
 <select name="movies">
 <?php
@@ -39,6 +39,8 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 	}
 ?>
 </select>
+<input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
