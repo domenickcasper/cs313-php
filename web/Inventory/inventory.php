@@ -20,12 +20,32 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 ?>
 </select>
 
+<!-- -->
+<select name="movieGenre">
+<?php
+foreach ($db->query('SELECT id, genre FROM genre WHERE media = 0') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+	}
+?>
+</select>
+
 <p>Video Games</p>
 <select name="console">
 <?php
 foreach ($db->query('SELECT id, console FROM console') as $row)
 	{
   	echo '<option value =' . $row['id'] . '>' . $row['console'] . '</option>';
+	}
+?>
+</select>
+
+<!-- -->
+<select name="vgGenre">
+<?php
+foreach ($db->query('SELECT id, genre FROM genre WHERE media = 1') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
 	}
 ?>
 </select>
@@ -39,6 +59,17 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 	}
 ?>
 </select>
+
+<!-- -->
+<select name="musicGenre">
+<?php
+foreach ($db->query('SELECT id, genre FROM genre WHERE media = 2') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+	}
+?>
+</select>
+
 <input type="submit" value="Submit">
 </form>
 
