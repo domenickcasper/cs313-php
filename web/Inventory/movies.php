@@ -6,7 +6,7 @@ var_dump($_POST);
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Movies</title>
 </head>
 <body>
 
