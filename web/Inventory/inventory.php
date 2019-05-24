@@ -9,7 +9,7 @@ session_start();
 	<title>INVENTORY</title>
 </head>
 <body>
-<form method="GET" action="inventory.php">
+<form action="movies.php" method="POST" >
 <p>Movies</p>
 <select name="movies">
 <?php
@@ -40,6 +40,11 @@ foreach ($db->query('SELECT id, rating FROM rating WHERE media = 0') as $row)
 ?>
 </select>
 
+<input type="submit" value="Submit">
+
+</form>
+
+<form action="console.php" method="POST">
 <p>Video Games</p>
 <select name="console">
 <?php
@@ -70,6 +75,11 @@ foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
 ?>
 </select>
 
+<input type="submit" value="Submit">
+
+</form>
+
+<form action = "music.php" method="POST">
 <p>Music</p>
 <select name="music">
 <?php
