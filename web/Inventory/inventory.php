@@ -13,13 +13,15 @@ session_start();
 <!--Movie Form-->
 <form action="movies.php" method="POST" >
 <p>Movies</p>
+Title: <input type="text" name="movieTitle">
+Sub-Title: <input type="text" name="movieSubTitle">
 
-<!--Movie Types-->
-<select name="movies">
+<!--Movie Ratings-->
+<select name="movieRating">
 <?php
-foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
+foreach ($db->query('SELECT id, rating FROM rating WHERE media = 0') as $row)
 	{
-  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
+  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
 	}
 ?>
 </select>
@@ -34,28 +36,31 @@ foreach ($db->query('SELECT id, genre FROM genre WHERE media = 0') as $row)
 ?>
 </select>
 
-<!--Movie Ratings-->
-<select name="movieRating">
+<!--Movie Types-->
+<select name="movieType">
 <?php
-foreach ($db->query('SELECT id, rating FROM rating WHERE media = 0') as $row)
+foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 	{
-  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
+  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
 	}
 ?>
 </select>
+
 <input type="submit" value="Submit">
 </form>
 
 <!--Video Game Form-->
 <form action="console.php" method="POST">
 <p>Video Games</p>
+Title: <input type="text" name="vgTitle">
+Sub-Title: <input type="text" name="vgSubTitle">
 
-<!--Video Game Console-->
-<select name="console">
+<!--Video Game Rating-->
+<select name="vgRating">
 <?php
-foreach ($db->query('SELECT id, console FROM console') as $row)
+foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
 	{
-  	echo '<option value =' . $row['id'] . '>' . $row['console'] . '</option>';
+  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
 	}
 ?>
 </select>
@@ -70,30 +75,26 @@ foreach ($db->query('SELECT id, genre FROM genre WHERE media = 1') as $row)
 ?>
 </select>
 
-<!--Video Game Rating-->
-<select name="vgRating">
+<!--Video Game Console-->
+<select name="console">
 <?php
-foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
+foreach ($db->query('SELECT id, console FROM console') as $row)
 	{
-  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
+  	echo '<option value =' . $row['id'] . '>' . $row['console'] . '</option>';
 	}
 ?>
 </select>
+
 <input type="submit" value="Submit">
 </form>
 
 <!--Music Form-->
 <form action = "music.php" method="POST">
 <p>Music</p>
-<!--Music Types-->
-<select name="music">
-<?php
-foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
-	}
-?>
-</select>
+
+Title: <input type="text" name="musicTitle">
+Artist: <input type="text" name="artist">
+Album: <input type="text" name="album">
 
 <!--Music Genres-->
 <select name="musicGenre">
@@ -104,6 +105,17 @@ foreach ($db->query('SELECT id, genre FROM genre WHERE media = 2') as $row)
 	}
 ?>
 </select>
+
+<!--Music Types-->
+<select name="music">
+<?php
+foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
+	}
+?>
+</select>
+
 <input type="submit" value="Submit">
 </form>
 
