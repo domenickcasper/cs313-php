@@ -1,4 +1,4 @@
-<? php
+<?php
 include 'database.php';
 session_start();
 ?>
@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
 
-<? php
+<?php
 foreach ($db->query('SELECT email, password FROM users') as $row)
 {
   echo 'email: ' . $row['email'];
