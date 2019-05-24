@@ -10,14 +10,14 @@ session_start();
 </head>
 <body>
 
+<select name="type0">
 <?php
-foreach ($db->query('SELECT email, password FROM users') as $row)
-{
-  echo 'email: ' . $row['email'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
+foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
+	{
+  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
+	}
 ?>
+</select>
 
 </body>
 </html>
