@@ -42,7 +42,7 @@ if (isset($_POST)) {
 	</tr>
 <?php
 	foreach ($db->query('SELECT title, subtitle, rating, genre, type FROM movies WHERE user_id = 1') as $row) {
-		echo '<tr>'
+		echo '<tr>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['subtitle'] . '</td>';
 		echo '<td>' . $row['rating'] . '</td>';
