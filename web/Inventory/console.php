@@ -35,6 +35,28 @@ if (isset($_POST)) {
 	<title>Video Games</title>
 </head>
 <body>
-
+<form method="POST" action="console.php">
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Sub-Title</th>
+		<th>Rating</th>
+		<th>Genre</th>
+		<th>Console</th>
+	</tr>
+<?php
+	foreach ($db->query('SELECT v.id, v.title, v.subtitle, g.genre, c.console, r.rating FROM video_games v
+	INNER JOIN rating r ON v.rating = r.id INNER JOIN console c ON v.type = c.id 
+	INNER JOIN genre g ON v.genre = g.id WHERE v.user_id = 1') as $row) {
+		echo '<tr>';
+		echo '<td>' . $row['title'] . '</td>';
+		echo '<td>' . $row['subtitle'] . '</td>';
+		echo '<td>' . $row['rating'] . '</td>';
+		echo '<td>' . $row['genre'] . '</td>';
+		echo '<td>' . $row['console'] . '</td>';
+		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>'; 
+		echo '</tr>';
+	}
+?>
 </body>
 </html>
