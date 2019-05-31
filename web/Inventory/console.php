@@ -46,7 +46,7 @@ if (isset($_POST)) {
 	</tr>
 <?php
 	foreach ($db->query('SELECT v.id, v.title, v.subtitle, g.genre, c.console, r.rating FROM video_games v
-	INNER JOIN rating r ON v.rating = r.id INNER JOIN console c ON v.type = c.id 
+	INNER JOIN rating r ON v.rating = r.id INNER JOIN console c ON v.console = c.id 
 	INNER JOIN genre g ON v.genre = g.id WHERE v.user_id = 1') as $row) {
 		echo '<tr>';
 		echo '<td>' . $row['title'] . '</td>';
