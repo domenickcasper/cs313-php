@@ -7,6 +7,7 @@ if (isset($_POST)) {
 	$movieR = $_POST['movieRating'];
 	$movieG = $_POST['movieGenre'];
 	$movieTy = $_POST['movieType'];
+	$user = 1;
 
 	$sql = 'INSERT INTO movies (title, subtitle, rating, genre, type, user_id)
 				VALUES (:title, :subtitle, :rating, :genre, :type, :user_id)';
@@ -17,7 +18,7 @@ if (isset($_POST)) {
 	$prep->bindParam(':rating', $movieR);
 	$prep->bindParam(':genre', $movieG);
 	$prep->bindParam(':type', $movieTy);
-	$prep->bindParam(':user_id', 1);
+	$prep->bindParam(':user_id', $user);
 
 	$prep->execute();
 
