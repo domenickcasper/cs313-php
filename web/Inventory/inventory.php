@@ -48,6 +48,7 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 
 <input type="submit" value="Submit">
 </form>
+<a href = "./movie.php">View Movie Inventory>
 
 <!--Video Game Form-->
 <form action="console.php" method="POST">
