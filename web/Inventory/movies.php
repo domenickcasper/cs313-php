@@ -41,7 +41,9 @@ if (isset($_POST)) {
 		<th>Type</th>
 	</tr>
 <?php
-	foreach ($db->query('SELECT title, subtitle, rating, genre, type FROM movies WHERE user_id = 1') as $row) {
+	foreach ($db->query('SELECT m.title, m.subtitle, g.genre, t.type, r.rating FROM movies m
+	INNER JOIN rating r ON m.rating_id = r.id INNER JOIN type t ON m.type = t.type 
+	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1') as $row) {
 		echo '<tr>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['subtitle'] . '</td>';
