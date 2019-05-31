@@ -32,7 +32,26 @@ if (isset($_POST)) {
 </head>
 <body>
 
-
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Sub-Title</th>
+		<th>Rating</th>
+		<th>Genre</th>
+		<th>Type</th>
+	</tr>
+<?php
+	foreach ($db->query('SELECT title, subtitle, rating, genre, type FROM movies WHERE user_id = 1') as $row) {
+		echo '<tr>'
+		echo '<td>' . $row['title'] . '</td>';
+		echo '<td>' . $row['subtitle'] . '</td>';
+		echo '<td>' . $row['rating'] . '</td>';
+		echo '<td>' . $row['genre'] . '</td>';
+		echo '<td>' . $row['type'] . '</td>';
+		echo '</tr>';
+	}
+?>
+</table>
 
 </body>
 </html>
