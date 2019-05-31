@@ -1,6 +1,27 @@
 <?php
 session_start();
-var_dump($_POST);
+include 'database.php';
+if (isset($_POST)) {
+	$movieT = $_POST['movieTitle'];
+	$movieS = $_POST['movieSubTitle'];
+	$movieR = $_POST['movieRating'];
+	$movieG = $_POST['movieGenre'];
+	$movieTy = $_POST['movieType'];
+
+	$sql = 'INSERT INTO movies (title, subtitle, rating, genre, type, user_id)
+				VALUES (:title, :subtitle, :rating, :genre, :type, :user_id)';
+
+	$prep = $db->prepare($sql);
+	$prep->bindParam(':title', $movieT);
+	$prep->bindParam(':subtitle', $movieS);
+	$prep->bindParam(':rating', $movieR);
+	$prep->bindParam(':genre', $movieG);
+	$prep->bindParam(':type', $movieTy);
+	$prep->bindParam(':user_id', 1);
+
+	$prep->execute();
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +30,8 @@ var_dump($_POST);
 	<title>Movies</title>
 </head>
 <body>
+
+
 
 </body>
 </html>
