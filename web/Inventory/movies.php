@@ -5,9 +5,6 @@ if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM movies WHERE id =' . $_POST['delete']);
 	}
-	elseif (isset($_POST['update'])) {
-		$db->query('UPDATE FROM movies WHERE id =' . $_POST['update']);
-	}
 	else {
 		$movieT = $_POST['movieTitle'];
 		$movieS = $_POST['movieSubTitle'];
