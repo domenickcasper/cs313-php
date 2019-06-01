@@ -55,7 +55,7 @@ if (isset($_POST)) {
 		echo '<td>' . $row['rating'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';
 		echo '<td>' . $row['type'] . '</td>';
-		echo '<td><button type="submit" value="' . $row['id'] . '"name="update">Update</button>'; 
+		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete</button>';
 		echo '</tr>';
 	}
