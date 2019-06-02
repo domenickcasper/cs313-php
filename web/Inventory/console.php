@@ -47,6 +47,8 @@ if (isset($_POST)) {
 		<th>Rating</th>
 		<th>Genre</th>
 		<th>Console</th>
+		<th>Update</th>
+		<th>Delete</th>
 	</tr>
 <?php
 	foreach ($db->query('SELECT v.id, v.title, v.subtitle, g.genre, c.console, r.rating FROM video_games v

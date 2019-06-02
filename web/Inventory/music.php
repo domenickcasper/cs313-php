@@ -47,6 +47,8 @@ if (isset($_POST)) {
 		<th>Album</th>
 		<th>Genre</th>
 		<th>Type</th>
+		<th>Update</th>
+		<th>Delete</th>
 	</tr>
 <?php
 	foreach ($db->query('SELECT m.id, m.title, m.artist, m.album, g.genre, t.type FROM music m

@@ -48,6 +48,8 @@ if (isset($_POST)) {
 		<th>Rating</th>
 		<th>Genre</th>
 		<th>Type</th>
+		<th>Update</th>
+		<th>Delete</th>
 	</tr>
 <?php
 	foreach ($db->query('SELECT m.id, m.title, m.subtitle, g.genre, t.type, r.rating FROM movies m 
