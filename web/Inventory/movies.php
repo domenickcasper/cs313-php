@@ -57,11 +57,11 @@ if (isset($_POST)) {
 	INNER JOIN rating r ON m.rating = r.id INNER JOIN type t ON m.type = t.id 
 	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.type, m.title') as $row) {
 		echo '<tr>';
+		echo '<td>' . $row['type'] . '</td>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['subtitle'] . '</td>';
 		echo '<td>' . $row['rating'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';
-		echo '<td>' . $row['type'] . '</td>';
 		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete</button>';
 		echo '</tr>';
