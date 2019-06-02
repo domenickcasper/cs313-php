@@ -44,11 +44,11 @@ if (isset($_POST)) {
 <form method="POST" action="movies.php">
 <table align="center">
 	<tr>
+		<th>Type</th>
 		<th>Title</th>
 		<th>Sub-Title</th>
 		<th>Rating</th>
 		<th>Genre</th>
-		<th>Type</th>
 		<th>Update</th>
 		<th>Delete</th>
 	</tr>
