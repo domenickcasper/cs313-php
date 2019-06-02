@@ -39,6 +39,7 @@ if (isset($_POST)) {
 	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
+<h1>Your Movie Inventory</h1>
 
 <form method="POST" action="movies.php">
 <table align="center">

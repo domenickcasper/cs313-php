@@ -39,6 +39,9 @@ if (isset($_POST)) {
 	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
+<h1>Your Music Inventory</h1>
+
+
 <form method="POST" action="music.php">
 <table align="center">
 	<tr>

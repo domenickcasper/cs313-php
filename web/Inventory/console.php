@@ -39,6 +39,9 @@ if (isset($_POST)) {
 	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
+<h1>Your Video Game Inventory</h1>
+
+
 <form method="POST" action="console.php">
 <table align="center">
 	<tr>
