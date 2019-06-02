@@ -51,7 +51,7 @@ if (isset($_POST)) {
 <?php
 	foreach ($db->query('SELECT m.id, m.title, m.subtitle, g.genre, t.type, r.rating FROM movies m 
 	INNER JOIN rating r ON m.rating = r.id INNER JOIN type t ON m.type = t.id 
-	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.title') as $row) {
+	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.title AND t.type') as $row) {
 		echo '<tr>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['subtitle'] . '</td>';
