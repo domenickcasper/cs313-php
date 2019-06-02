@@ -5,6 +5,9 @@ if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM music WHERE id =' . $_POST['delete']);
 	}
+	elseif (isset($_POST['update'])) {	
+	
+	}
 	else {
 		$musicT = $_POST['musicTitle'];
 		$musicAr = $_POST['artist'];
@@ -47,14 +50,15 @@ if (isset($_POST)) {
 <?php
 	foreach ($db->query('SELECT m.id, m.title, m.artist, m.album, g.genre, t.type FROM music m
 	INNER JOIN type t ON m.type = t.id 
-	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1') as $row) {
+	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.type, m.title') as $row) {
 		echo '<tr>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['artist'] . '</td>';
 		echo '<td>' . $row['album'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';
-		echo '<td>' . $row['type'] . '</td>';
-		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>'; 
+		echo '<td>' . $row['type'] . '</td>';		
+		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
+		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>';
 		echo '</tr>';
 	}
 ?>
