@@ -49,7 +49,7 @@ if (isset($_POST)) {
 		<th>Type</th>
 	</tr>
 <?php
-	foreach ($db->query('SELECT m.id, m.title, m.subtitle, g.genre, t.type, r.rating FROM movies m
+	foreach ($db->query('SELECT m.id, m.title, m.subtitle, g.genre, t.type, r.rating FROM movies m ORDER BY m.title
 	INNER JOIN rating r ON m.rating = r.id INNER JOIN type t ON m.type = t.id 
 	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1') as $row) {
 		echo '<tr>';
