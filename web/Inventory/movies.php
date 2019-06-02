@@ -36,11 +36,12 @@ if (isset($_POST)) {
 <html>
 <head>
 	<title>Movies</title>
+	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
 
 <form method="POST" action="movies.php">
-<table>
+<table align="center">
 	<tr>
 		<th>Title</th>
 		<th>Sub-Title</th>

@@ -36,10 +36,11 @@ if (isset($_POST)) {
 <html>
 <head>
 	<title>Video Games</title>
+	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
 <form method="POST" action="console.php">
-<table>
+<table align="center">
 	<tr>
 		<th>Title</th>
 		<th>Sub-Title</th>
