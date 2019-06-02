@@ -45,11 +45,11 @@ if (isset($_POST)) {
 <form method="POST" action="console.php">
 <table align="center">
 	<tr>
+		<th>Console</th>
 		<th>Title</th>
 		<th>Sub-Title</th>
 		<th>Rating</th>
 		<th>Genre</th>
-		<th>Console</th>
 		<th>Update</th>
 		<th>Delete</th>
 	</tr>
@@ -58,11 +58,11 @@ if (isset($_POST)) {
 	INNER JOIN rating r ON v.rating = r.id INNER JOIN console c ON v.console = c.id 
 	INNER JOIN genre g ON v.genre = g.id WHERE v.user_id = 1 ORDER BY v.console, v.title') as $row) {
 		echo '<tr>';
+		echo '<td>' . $row['console'] . '</td>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['subtitle'] . '</td>';
 		echo '<td>' . $row['rating'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';
-		echo '<td>' . $row['console'] . '</td>';
 		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>'; 
 		echo '</tr>';

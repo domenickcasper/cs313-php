@@ -45,11 +45,11 @@ if (isset($_POST)) {
 <form method="POST" action="music.php">
 <table align="center">
 	<tr>
+		<th>Type</th>
 		<th>Title</th>
 		<th>Artist</th>
 		<th>Album</th>
 		<th>Genre</th>
-		<th>Type</th>
 		<th>Update</th>
 		<th>Delete</th>
 	</tr>
@@ -58,11 +58,11 @@ if (isset($_POST)) {
 	INNER JOIN type t ON m.type = t.id 
 	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.type, m.title') as $row) {
 		echo '<tr>';
+		echo '<td>' . $row['type'] . '</td>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['artist'] . '</td>';
 		echo '<td>' . $row['album'] . '</td>';
-		echo '<td>' . $row['genre'] . '</td>';
-		echo '<td>' . $row['type'] . '</td>';		
+		echo '<td>' . $row['genre'] . '</td>';		
 		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>';
 		echo '</tr>';
