@@ -14,7 +14,7 @@ $email = htmlspecialchars($email);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 include 'database.php';
-$db = get_db();
+
 $query = 'INSERT INTO users(email, password) VALUES(:email, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':email', $email);
