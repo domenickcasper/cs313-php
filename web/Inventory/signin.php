@@ -3,17 +3,17 @@ session_start();
 
 $badLogin = false;
 
-if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
+if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 {
 
-	$username = $_POST['txtUser'];
+	$email = $_POST['txtEmail'];
 	$password = $_POST['txtPassword'];
 
 	include 'database.php';
 	$db = get_db();
-	$query = 'SELECT password FROM login WHERE username=:username';
+	$query = 'SELECT password FROM users WHERE email=:email';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
+	$statement->bindValue(':email', $email);
 	$result = $statement->execute();
 	if ($result)
 	{
@@ -23,7 +23,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
 
-			$_SESSION['username'] = $username;
+			$_SESSION['email'] = $email;
 			header("Location: home.php");
 			die(); 
 		}
@@ -51,8 +51,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 
 <form id="mainForm" action="signin.php" method="POST">
 
-	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
-	<label for="txtUser">Username</label>
+	<input type="text" id="txtEmail" name="txtUser" placeholder="Email">
+	<label for="txtEmail">Email</label>
 	<br /><br />
 
 	<input type="password" id="txtPassword" name="txtPassword" placeholder="Password">

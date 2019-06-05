@@ -1,23 +1,23 @@
 <?php
 
-$username = $_POST['txtUser'];
+$email = $_POST['txtEmail'];
 $password = $_POST['txtPassword'];
-if (!isset($username) || $username == ""
+if (!isset($email) || $email == ""
 	|| !isset($password) || $password == "")
 {
 	header("Location: signup.php");
 	die(); 
 }
 
-$username = htmlspecialchars($username);
+$email = htmlspecialchars($email);
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 include 'database.php';
 $db = get_db();
-$query = 'INSERT INTO login(username, password) VALUES(:username, :password)';
+$query = 'INSERT INTO users(email, password) VALUES(:email, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
+$statement->bindValue(':email', $email);
 $statement->bindValue(':password', $hashedPassword);
 $statement->execute();
 header("Location: signin.php");

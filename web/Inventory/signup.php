@@ -13,8 +13,8 @@ session_start();
 
 <form id="mainForm" action="createAccount.php" method="POST">
 
-	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
-	<label for="txtUser">Username</label>
+	<input type="text" id="txtEmail" name="txtEmail" placeholder="Email">
+	<label for="txtEmail">Email</label>
 	<br /><br />
 
 	<input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
