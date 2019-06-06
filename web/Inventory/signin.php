@@ -42,7 +42,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 <html>
 <head>
 	<title>Sign In</title>
-	<link rel="stylesheet" type="text/css" href="./inventory.css">
+	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
 
