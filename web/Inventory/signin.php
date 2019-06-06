@@ -10,7 +10,6 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	include 'database.php';
-	$db = get_db();
 	$query = 'SELECT password FROM users WHERE email=:email';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':email', $email);
