@@ -21,10 +21,10 @@ else
 
 	<h1>Welcome to the homepage!</h1>
 
-	Your email is: <?= $email ?><br /><br />
+	You're signed in as: <?= $email ?><br /><br />
 
-	<a href="signout.php">Sign Out</a>
-	<a href="inventory.php">View Your Inventory</a>
+	<button><a href="signout.php">Sign Out</a></button>
+	<button><a href="inventory.php">View Your Inventory</a></button>
 
 </body>
 </html>
