@@ -42,7 +42,7 @@ if (isset($_POST)) {
 <h1>Your Movie Inventory</h1>
 
 
-	<button><a href="inventory.php">View Your Inventory</a></button>
+	<button><a href="inventory.php">Add New Inventory Item</a></button>
 
 <form method="POST" action="movies.php">
 <table align="center">
