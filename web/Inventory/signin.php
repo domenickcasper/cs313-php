@@ -50,7 +50,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 
 <form id="mainForm" action="signin.php" method="POST">
 
-	<input type="text" id="txtEmail" name="txtUser" placeholder="Email">
+	<input type="text" id="txtEmail" name="txtEmail" placeholder="Email">
 	<label for="txtEmail">Email</label>
 	<br /><br />
 
