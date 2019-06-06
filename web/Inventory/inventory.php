@@ -46,7 +46,7 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 ?>
 </select>
 
-<button><a href="./movies.php">View Movies</a></button>
+<!-- <button><a href="./movies.php">View Movies</a></button>-->
 <input type="submit" value="Submit">
 </form>
 
