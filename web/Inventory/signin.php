@@ -12,7 +12,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 	include 'database.php';
 	$query = 'SELECT password FROM users WHERE email=:email';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':email', $email);
+	$statement->bindParam(':email', $email);
 	$result = $statement->execute();
 	if ($result)
 	{

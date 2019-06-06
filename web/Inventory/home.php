@@ -18,7 +18,6 @@ else
 </head>
 
 <body>
-<div>
 
 	<h1>Welcome to the homepage!</h1>
 
@@ -26,7 +25,6 @@ else
 
 	<a href="signout.php">Sign Out</a>
 	<a href="inventory.php">View Your Inventory</a>
-</div>
 
 </body>
 </html>

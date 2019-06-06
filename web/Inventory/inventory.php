@@ -119,5 +119,8 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 <input type="submit" value="Submit">
 </form>
 
+<a href="signout.php">Sign Out</a>
+<a href="inventory.php">View Your Inventory</a>
+
 </body>
 </html>

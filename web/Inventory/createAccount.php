@@ -17,8 +17,8 @@ include 'database.php';
 
 $query = 'INSERT INTO users(email, password) VALUES(:email, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':email', $email);
-$statement->bindValue(':password', $hashedPassword);
+$statement->bindParam(':email', $email);
+$statement->bindParam(':password', $hashedPassword);
 $statement->execute();
 header("Location: signin.php");
 die();
