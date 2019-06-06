@@ -24,3 +24,14 @@ header("Location: signin.php");
 die();
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Account</title>
+	<link rel="stylesheet" href="./inventory.css">
+</head>
+<body>
+
+</body>
+</html>

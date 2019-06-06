@@ -15,7 +15,7 @@ else
 <html>
 <head>
 	<title>Home Page</title>
-	<link rel="stylesheet" type="text/css" href="./inventory.css">
+	<link rel="stylesheet" href="./inventory.css">
 </head>
 
 <body>

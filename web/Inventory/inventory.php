@@ -7,6 +7,7 @@ session_start();
 <html>
 <head>
 	<title>INVENTORY</title>
+	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
 
@@ -120,8 +121,8 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 <input type="submit" value="Submit">
 </form>
 
-<a href="signout.php">Sign Out</a>
-<a href="inventory.php">View Your Inventory</a>
+<button><a href="signout.php">Sign Out</a></button>
+<button><a href="inventory.php">View Your Inventory</a></button>
 
 </body>
 </html>
