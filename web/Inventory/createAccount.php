@@ -33,5 +33,7 @@ die();
 </head>
 <body>
 
+	<button><a href="home.php">Back to the Homepage</a></button>
+
 </body>
 </html>

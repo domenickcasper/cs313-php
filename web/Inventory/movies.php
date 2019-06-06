@@ -41,6 +41,9 @@ if (isset($_POST)) {
 <body>
 <h1>Your Movie Inventory</h1>
 
+
+	<button><a href="inventory.php">View Your Inventory</a></button>
+
 <form method="POST" action="movies.php">
 <table align="center">
 	<tr>
