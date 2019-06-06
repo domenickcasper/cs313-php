@@ -14,7 +14,7 @@ if (isset($_POST)) {
 		$movieR = $_POST['movieRating'];
 		$movieG = $_POST['movieGenre'];
 		$movieTy = $_POST['movieType'];
-		$user = $_POST['txtEmail'];
+		$user = 1;
 
 		$sql = 'INSERT INTO movies (title, subtitle, rating, genre, type, user_id)
 					VALUES (:title, :subtitle, :rating, :genre, :type, :user_id)';
