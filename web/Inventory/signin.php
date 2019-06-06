@@ -46,7 +46,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 </head>
 <body>
 
-<h1>Please sign in below:</h1>
+<h1>Please sign in to access your inventory:</h1>
 
 <form id="mainForm" action="signin.php" method="POST">
 
@@ -64,7 +64,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 
 <br /><br />
 
-Or <a href="signup.php">Sign up</a> for a new account.
+Or <button><a href="signup.php">Sign up</a></button> for a new account.
 
 
 </body>
