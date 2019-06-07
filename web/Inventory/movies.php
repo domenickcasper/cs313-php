@@ -72,7 +72,6 @@ if (isset($_POST)) {
 <body>
 <h1>Your Movie Inventory</h1>
 
-
 	<button><a href="inventory.php">Add New Inventory Item</a></button>
 
 <form method="POST" action="movies.php">
@@ -100,6 +99,8 @@ if (isset($_POST)) {
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete</button>';
 		echo '</tr>';
 	}
+
+	unset($_SESSION['table']);
 ?>
 </table>
 </form>
