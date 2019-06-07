@@ -20,12 +20,15 @@ else
 
 <body>
 
-	<h1>Welcome to the homepage!</h1>
+	<h1>Welcome to your New Inventory App!</h1>
 
 	You're signed in as: <?= $email ?><br /><br />
 
 	<button><a href="signout.php">Sign Out</a></button>
-	<button><a href="inventory.php">View Your Inventory</a></button>
+	<button><a href="inventory.php">View Movies</a></button>
+	<button><a href="inventory.php">View Games</a></button>
+	<button><a href="inventory.php">View Music</a></button>
+	<button><a href="inventory.php">Add New Inventory</a></button>
 
 </body>
 </html>
