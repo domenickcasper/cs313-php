@@ -35,6 +35,6 @@ button {
 .button {
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
-	float: center;
+	display: block;
+	margin: auto;
 }
