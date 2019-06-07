@@ -136,10 +136,11 @@ if($_SESSION['table'] == 'video_games') {
 
 	echo '<input type="submit" value="Update">';
 	echo '</form>';
-
+}
 	if (isset($_SESSION['consoleid'])) {
 		unset($temporary);
 	}
+
 
 ?>
 
