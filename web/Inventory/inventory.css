@@ -1,14 +1,14 @@
 th, td {
 	border-bottom: 1px solid black;
 	padding: 30px;
-    margin: auto;
+    margin: 50px;
     float: center;
     text-align: left;
     font-family: courier;
 }
 
 table {
-	margin: auto;
+	margin: 50px;
 	padding: 30px;
 }
 
