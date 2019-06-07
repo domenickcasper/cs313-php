@@ -68,7 +68,6 @@ if($_SESSION['table'] == 'movies') {
 		}
 	echo '</select>';
 
-	echo '<button><a href="./movies.php">View Movies</a></button>';
 	echo '<input type="submit" name="updateMovies" value="Update">';
 	echo '</form>';
 }
@@ -97,6 +96,7 @@ if($_SESSION['table'] == 'video_games') {
 
 	#RATING
 	echo '<select name="vgRating">';
+
 	foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
 		{
 			if($temporary['rating'] == $row['id']) {
@@ -134,13 +134,12 @@ if($_SESSION['table'] == 'video_games') {
 		}
 	echo '</select>';
 
-	echo '<input type="submit" value="Update">';
+	echo '<input type="submit" name="updateConsole" value="Update">';
 	echo '</form>';
 }
 	if (isset($_SESSION['consoleid'])) {
 		unset($temporary);
 	}
-
 
 ?>
 
