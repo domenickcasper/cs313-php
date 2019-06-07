@@ -75,6 +75,7 @@ if($_SESSION['table'] == 'movies') {
 
 if (isset($_SESSION['movieid'])) {
 	unset($temporary);
+}
 
 ?>
 
@@ -84,7 +85,6 @@ if (isset($_SESSION['consoleid'])) {
 	$consoleid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['consoleid']);
 	$temporary = $consoleid->fetch();	
 }
-
 ?>
 
 <?php
