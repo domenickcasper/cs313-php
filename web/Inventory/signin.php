@@ -10,7 +10,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	include 'database.php';
-	$query = 'SELECT password FROM users WHERE email=:email';
+	$query = 'SELECT id, password FROM users WHERE email=:email';
 	$statement = $db->prepare($query);
 	$statement->bindParam(':email', $email);
 	$result = $statement->execute();
@@ -21,7 +21,7 @@ if (isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
-
+			$_SESSION['id'] = $row['id'];
 			$_SESSION['email'] = $email;
 			header("Location: home.php");
 			die(); 
