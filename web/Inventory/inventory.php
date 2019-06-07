@@ -1,6 +1,7 @@
 <?php
 include 'database.php';
 session_start();
+$temporary = -1;
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,13 @@ session_start();
 	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
+<?php
+if (isset($_POST['update'])) {
+	$movieid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_POST['update']);
+	$temporary = $movieid->fetch();	
+	var_dump($temporary);
+}
+?>
 
 <!--Movie Form-->
 <form action="movies.php" method="POST" >
@@ -50,6 +58,8 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 <button><a href="./movies.php">View Movies</a></button>
 <input type="submit" value="Submit">
 </form>
+
+
 
 <!--Video Game Form-->
 <form action="console.php" method="POST">

@@ -1,6 +1,9 @@
 <?php
 session_start();
 include 'database.php';
+
+$_SESSION['table'] = 'movies';
+
 if (!isset($_SESSION['id'])){
 	header("Location: signin.php");
 	die(); 
@@ -8,9 +11,6 @@ if (!isset($_SESSION['id'])){
 if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM movies WHERE id =' . $_POST['delete']);
-	}
-	elseif (isset($_POST['update'])) {
-		
 	}
 	elseif (isset($_POST['movieTitle'])) {
 		$movieT = $_POST['movieTitle'];
@@ -70,7 +70,7 @@ if (isset($_POST)) {
 		echo '<td>' . $row['subtitle'] . '</td>';
 		echo '<td>' . $row['rating'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';
-		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
+		echo '<td><button type="submit" value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete</button>';
 		echo '</tr>';
 	}
