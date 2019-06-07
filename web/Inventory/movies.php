@@ -100,8 +100,6 @@ if (isset($_POST)) {
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete</button>';
 		echo '</tr>';
 	}
-
-	unset($_SESSION['table']);
 ?>
 </table>
 </form>
