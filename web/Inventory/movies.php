@@ -71,8 +71,7 @@ if (isset($_POST)) {
 </head>
 <body>
 <h1>Your Movie Inventory</h1>
-
-	<button><a href="inventory.php">Add New Inventory Item</a></button>
+<button class="button"><a href="inventory.php">Back to Inventory</a></button>
 
 <form method="POST" action="movies.php">
 <table align="center">
