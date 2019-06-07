@@ -8,7 +8,7 @@ if (isset($_POST)) {
 	elseif (isset($_POST['update'])) {
 		
 	}
-	else {
+	elseif (isset($_POST['movieTitle'])) {
 		$movieT = $_POST['movieTitle'];
 		$movieS = $_POST['movieSubTitle'];
 		$movieR = $_POST['movieRating'];
