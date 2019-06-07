@@ -36,6 +36,7 @@ elseif (isset($_POST['updateConsole'])) {
 		$prep->bindParam(':genre', $vgG);
 		$prep->bindParam(':console', $console);
 
+
 		$prep->execute();
 	}
 	else {
@@ -44,7 +45,7 @@ elseif (isset($_POST['updateConsole'])) {
 		$vgR = $_POST['vgRating'];
 		$vgG = $_POST['vgGenre'];
 		$console = $_POST['console'];
-		$user = 1;
+		$user = $_SESSION['id'];
 
 		$sql = 'INSERT INTO video_games (title, subtitle, rating, genre, console, user_id)
 					VALUES (:title, :subtitle, :rating, :genre, :console, :user_id)';
