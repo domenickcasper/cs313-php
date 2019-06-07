@@ -1,12 +1,43 @@
 <?php
 session_start();
 include 'database.php';
+
+$_SESSION['table'] = 'music';
+
+if (!isset($_SESSION['id'])){
+	header("Location: signin.php");
+	die(); 
+}
+if (isset($_POST['update'])) {
+	$_SESSION['musicid'] = $_POST['update'];
+	header("Location: update.php");
+	die();
+}
+
 if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM music WHERE id =' . $_POST['delete']);
 	}
 	elseif (isset($_POST['update'])) {	
-	
+		$musicT = $_POST['musicTitle'];
+		$musicAr = $_POST['artist'];
+		$musicAl = $_POST['album'];
+		$musicG = $_POST['musicGenre'];
+		$musicTy = $_POST['music'];
+		$user = $_SESSION['id'];
+
+		$sql = 'UPDATE music 
+			SET title = :title, artist = :artist, album = :album, genre = :genre, type = :type
+			WHERE id = ' . $_SESSION['musicid'];
+
+		$prep = $db->prepare($sql);
+		$prep->bindParam(':title', $musicT);
+		$prep->bindParam(':artist', $musicAr);
+		$prep->bindParam(':album', $musicAl);
+		$prep->bindParam(':genre', $musicG);
+		$prep->bindParam(':type', $musicTy);
+
+		$prep->execute();
 	}
 	else {
 		$musicT = $_POST['musicTitle'];
@@ -14,7 +45,7 @@ if (isset($_POST)) {
 		$musicAl = $_POST['album'];
 		$musicG = $_POST['musicGenre'];
 		$musicTy = $_POST['music'];
-		$user = 1;
+		$user = $_SESSION['id'];
 
 		$sql = 'INSERT INTO music (title, artist, album, genre, type, user_id)
 					VALUES (:title, :artist, :album, :genre, :type, :user_id)';
@@ -56,14 +87,14 @@ if (isset($_POST)) {
 <?php
 	foreach ($db->query('SELECT m.id, m.title, m.artist, m.album, g.genre, t.type FROM music m
 	INNER JOIN type t ON m.type = t.id 
-	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = 1 ORDER BY m.type, m.title') as $row) {
+	INNER JOIN genre g ON m.genre = g.id WHERE m.user_id = ' . $_SESSION['id'] . ' ORDER BY m.type, m.title') as $row) {
 		echo '<tr>';
 		echo '<td>' . $row['type'] . '</td>';
 		echo '<td>' . $row['title'] . '</td>';
 		echo '<td>' . $row['artist'] . '</td>';
 		echo '<td>' . $row['album'] . '</td>';
 		echo '<td>' . $row['genre'] . '</td>';		
-		echo '<td><button value="' . $row['id'] . '"name="update">Update</button>'; 
+		echo '<td><button type="submit" value="' . $row['id'] . '"name="update">Update</button>'; 
 		echo '<td><button type="submit" value="' . $row['id'] . '"name="delete">Delete Items</button>';
 		echo '</tr>';
 	}

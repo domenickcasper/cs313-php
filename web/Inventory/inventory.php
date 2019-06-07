@@ -122,6 +122,7 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 ?>
 </select>
 
+<button><a href="./music.php">View Games</a></button>
 <input type="submit" value="Submit">
 </form>
 

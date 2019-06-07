@@ -143,36 +143,56 @@ if($_SESSION['table'] == 'video_games') {
 
 ?>
 
-<!--Music Form-->
-<form action = "music.php" method="POST">
-<p>Music</p>
-
-Title: <input type="text" name="musicTitle">
-Artist: <input type="text" name="artist">
-Album: <input type="text" name="album">
-
-<!--Music Genres-->
-<select name="musicGenre">
 <?php
-foreach ($db->query('SELECT id, genre FROM genre WHERE media = 2') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+if (isset($_SESSION['musicid'])) {
+	$musicid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['musicid']);
+	$temporary = $movieid->fetch();	
+}
+?>
+
+<?php
+if($_SESSION['table'] == 'video_games') {
+	#MUSIC
+	echo '<form action = "music.php" method="POST">';
+	echo '<p>Music</p>';
+
+		echo 'Title: <input type="text" value="' . $temporary['title'] . '" name="musicTitle">';
+		echo 'Artist: <input type="text" value="' . $temporary['title'] . '" name="artist">';
+		echo 'Album: <input type="text" value="' . $temporary['title'] . '" name="album">';
+
+	#GENRE
+	echo '<select name="musicGenre">';
+	foreach ($db->query('SELECT id, genre FROM genre WHERE media = 2') as $row)
+		{
+	  		if($temporary['genre'] == $row['id']) {
+	  			echo '<option value =' . $row['id'] . ' selected>' . $row['genre'] . '</option>';
+			}
+			else {
+				echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+			}
+		}
+	echo '</select>';
+
+	#TYPES
+	echo '<select name="music">';
+	foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
+		{
+			if($temporary['type'] == $row['id']) {
+	  			echo '<option value =' . $row['id'] . ' selected>' . $row['type'] . '</option>';
+			}
+			else {
+				echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
+			}
+		}
+	echo '</select>';
+
+	echo '<input type="submit" name="updateMusic" value="Submit">';
+	echo '</form>';
+}
+	if (isset($_SESSION['musicid'])) {
+		unset($temporary);
 	}
 ?>
-</select>
-
-<!--Music Types-->
-<select name="music">
-<?php
-foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['type'] . '</option>';
-	}
-?>
-</select>
-
-<input type="submit" value="Submit">
-</form>
 
 
 <button><a href="home.php">Back to the Homepage</a></button>
