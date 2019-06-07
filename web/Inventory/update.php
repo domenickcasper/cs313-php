@@ -31,7 +31,7 @@ if($_SESSION['table'] == 'movies') {
 
 	foreach ($db->query('SELECT id, rating FROM rating WHERE media = 0') as $row)
 		{
-			if($temporary['rating'] = $row['id']) {
+			if($temporary['rating'] == $row['id']) {
 	  			echo '<option value =' . $row['id'] . ' selected>' . $row['rating'] . '</option>';
 			}
 			else {
@@ -45,7 +45,7 @@ if($_SESSION['table'] == 'movies') {
 	echo '<select name="movieGenre">';
 	foreach ($db->query('SELECT id, genre FROM genre WHERE media = 0') as $row)
 		{
-			if($temporary['genre'] = $row['id']) {
+			if($temporary['genre'] == $row['id']) {
 	  			echo '<option value =' . $row['id'] . ' selected>' . $row['genre'] . '</option>';
 			}
 			else {
@@ -59,7 +59,7 @@ if($_SESSION['table'] == 'movies') {
 	echo '<select name="movieType">';
 	foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 		{
-			if($temporary['type'] = $row['id']) {
+			if($temporary['type'] == $row['id']) {
 	  			echo '<option value =' . $row['id'] . ' selected>' . $row['type'] . '</option>';
 			}
 			else {
