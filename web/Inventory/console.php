@@ -99,6 +99,8 @@ elseif (isset($_POST['updateConsole'])) {
 	}
 
 	unset($_SESSION['table']);
-	
+
+?>
+
 </body>
 </html>
