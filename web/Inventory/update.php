@@ -146,12 +146,12 @@ if($_SESSION['table'] == 'video_games') {
 <?php
 if (isset($_SESSION['musicid'])) {
 	$musicid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['musicid']);
-	$temporary = $movieid->fetch();	
+	$temporary = $musicid->fetch();	
 }
 ?>
 
 <?php
-if($_SESSION['table'] == 'video_games') {
+if($_SESSION['table'] == 'musicid') {
 	#MUSIC
 	echo '<form action = "music.php" method="POST">';
 	echo '<p>Music</p>';
