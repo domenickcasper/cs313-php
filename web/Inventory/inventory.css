@@ -32,6 +32,11 @@ button {
 	text-decoration: none;
 }
 
+.form {
+	display: inline-block;
+	text-align: center;
+}
+
 .button {
 	text-align: center;
 	text-decoration: none;

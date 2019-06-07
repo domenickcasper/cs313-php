@@ -194,9 +194,5 @@ if($_SESSION['table'] == 'music') {
 	}
 ?>
 
-
-<button><a href="home.php">Back to the Homepage</a></button>
-<button><a href="signout.php">Sign Out</a></button>
-
 </body>
 </html>
