@@ -100,6 +100,8 @@ if (isset($_POST)) {
 		echo '</tr>';
 	}
 
+unset($_SESSION['table']);
+
 ?>
 </table>
 </form>

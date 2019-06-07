@@ -98,6 +98,8 @@ if (isset($_POST)) {
 		echo '</tr>';
 	}
 
+unset($_SESSION['table']);
+
 ?>
 
 </body>
