@@ -25,9 +25,9 @@ else
 	You're signed in as: <?= $email ?><br /><br />
 
 	<button><a href="signout.php">Sign Out</a></button>
-	<button><a href="inventory.php">View Movies</a></button>
-	<button><a href="inventory.php">View Games</a></button>
-	<button><a href="inventory.php">View Music</a></button>
+	<button><a href="movies.php">View Movies</a></button>
+	<button><a href="console.php">View Games</a></button>
+	<button><a href="music.php">View Music</a></button>
 	<button><a href="inventory.php">Add New Inventory</a></button>
 
 </body>
