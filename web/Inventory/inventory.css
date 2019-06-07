@@ -1,6 +1,6 @@
 th, td {
 	border-bottom: 1px solid black;
-	padding: 10px;
+	padding: 30px;
     margin: auto;
     float: center;
     text-align: left;
@@ -9,8 +9,6 @@ th, td {
 
 table {
 	margin: auto;
-	table-layout: fixed;
-
 }
 
 h1 {
