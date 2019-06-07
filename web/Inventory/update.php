@@ -157,8 +157,8 @@ if($_SESSION['table'] == 'music') {
 	echo '<p>Music</p>';
 
 		echo 'Title: <input type="text" value="' . $temporary['title'] . '" name="musicTitle">';
-		echo 'Artist: <input type="text" value="' . $temporary['title'] . '" name="artist">';
-		echo 'Album: <input type="text" value="' . $temporary['title'] . '" name="album">';
+		echo 'Artist: <input type="text" value="' . $temporary['artist'] . '" name="artist">';
+		echo 'Album: <input type="text" value="' . $temporary['album'] . '" name="album">';
 
 	#GENRE
 	echo '<select name="musicGenre">';
