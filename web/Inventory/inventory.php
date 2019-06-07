@@ -127,7 +127,7 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 </form>
 
 <br><br>
-<button><a href="home.php">Back to the Homepage</a></button>
+<button><a href="home.php">Back to Homepage</a></button>
 <button><a href="signout.php">Sign Out</a></button>
 
 </body>
