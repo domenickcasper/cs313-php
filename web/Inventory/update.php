@@ -74,7 +74,6 @@ if($_SESSION['table'] == 'movies') {
 }
 
 if (isset($_SESSION['movieid'])) {
-	unset($movieid);
 	unset($temporary);
 
 ?>
@@ -139,7 +138,6 @@ if($_SESSION['table'] == 'video_games') {
 	echo '</form>';
 
 	if (isset($_SESSION['consoleid'])) {
-		unset($consoleid);
 		unset($temporary);
 	}
 
