@@ -23,7 +23,7 @@ if (isset($_SESSION['movieid'])) {
 if($_SESSION['table'] == 'movies') {
 	echo '<form action="movies.php" method="POST" >';
 	echo '<p>Movies</p>';
-		echo 'Title: <input type="text" value="' . $temporary['title'] .  '" name="movieTitle">';
+		echo 'Title: <input type="text" value="' . $temporary['title'] . '" name="movieTitle">';
 		echo 'Sub-Title: <input type="text" value="' . $temporary['subtitle'] . '" name="movieSubTitle">';
 
 	#RATING
@@ -69,50 +69,80 @@ if($_SESSION['table'] == 'movies') {
 	echo '</select>';
 
 	echo '<button><a href="./movies.php">View Movies</a></button>';
-	echo '<input type="submit" name="updateMovies" value="Submit">';
+	echo '<input type="submit" name="updateMovies" value="Update">';
 	echo '</form>';
+}
+
+if (isset($_SESSION['movieid'])) {
+	unset($movieid);
+	unset($temporary);
+
+?>
+
+<?php
+
+if (isset($_SESSION['consoleid'])) {
+	$consoleid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['consoleid']);
+	$temporary = $consoleid->fetch();	
 }
 
 ?>
 
-<!--Video Game Form-->
-<form action="console.php" method="POST">
-<p>Video Games</p>
-Title: <input type="text" name="vgTitle">
-Sub-Title: <input type="text" name="vgSubTitle">
-
-<!--Video Game Rating-->
-<select name="vgRating">
 <?php
-foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
-	}
-?>
-</select>
+if($_SESSION['table'] == 'video_games') {
+	#VIDEOGAME
+	echo '<form action="console.php" method="POST">';
+	echo '<p>Video Games</p>';
+	echo 'Title: <input type="text" value="' . $temporary['title'] . '" name="vgTitle">';
+	echo 'Sub-Title: <input type="text" value="' . $temporary['subtitle'] . '" name="vgSubTitle">';
 
-<!--Video Game Genres-->
-<select name="vgGenre">
-<?php
-foreach ($db->query('SELECT id, genre FROM genre WHERE media = 1') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
-	}
-?>
-</select>
+	#RATING
+	echo '<select name="vgRating">'
+	foreach ($db->query('SELECT id, rating FROM rating WHERE media = 1') as $row)
+		{
+			if($temporary['rating'] == $row['id']) {
+	  			echo '<option value =' . $row['id'] . ' selected>' . $row['rating'] . '</option>';
+			}
+			else {
+				echo '<option value =' . $row['id'] . '>' . $row['rating'] . '</option>';
+			}
+		}
+	echo '</select>';
 
-<!--Video Game Console-->
-<select name="console">
-<?php
-foreach ($db->query('SELECT id, console FROM console') as $row)
-	{
-  	echo '<option value =' . $row['id'] . '>' . $row['console'] . '</option>';
-	}
-?>
-</select>
+	#GENRE
+	echo '<select name="vgGenre">'
+	foreach ($db->query('SELECT id, genre FROM genre WHERE media = 1') as $row)
+		{
+			if($temporary['genre'] == $row['id']) {
+	  			echo '<option value =' . $row['id'] . ' selected>' . $row['genre'] . '</option>';
+			}
+			else {
+				echo '<option value =' . $row['id'] . '>' . $row['genre'] . '</option>';
+			}
+		}
+	echo '</select>'
 
-<input type="submit" value="Submit">
-</form>
+	#CONSOLE
+	echo '<select name="console">'
+	foreach ($db->query('SELECT id, console FROM console') as $row)
+		{
+			if($temporary['console'] == $row['id']) {
+	  			echo '<option value =' . $row['id'] . ' selected>' . $row['console'] . '</option>';
+			}
+			else {
+				echo '<option value =' . $row['id'] . '>' . $row['console'] . '</option>';
+			}
+		}
+	echo '</select>'
+
+	echo '<input type="submit" value="Update">'
+	echo '</form>';
+
+	if (isset($_SESSION['consoleid'])) {
+	unset($consoleid);
+	unset($temporary);
+
+?>
 
 <!--Music Form-->
 <form action = "music.php" method="POST">
