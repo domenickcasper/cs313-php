@@ -151,7 +151,7 @@ if (isset($_SESSION['musicid'])) {
 ?>
 
 <?php
-if($_SESSION['table'] == 'musicid') {
+if($_SESSION['table'] == 'music') {
 	#MUSIC
 	echo '<form action = "music.php" method="POST">';
 	echo '<p>Music</p>';
