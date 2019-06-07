@@ -27,11 +27,12 @@ if (isset($_POST)) {
 
 		$sql = 'UPDATE movies 
 				SET title = :title
+				SET subtitle = :subtitle
 				WHERE id = ' . $_SESSION['movieid'];
 
 		$prep = $db->prepare($sql);
 		$prep->bindParam(':title', $movieT);
-		#$prep->bindParam(':subtitle', $movieS);
+		$prep->bindParam(':subtitle', $movieS);
 		#$prep->bindParam(':rating', $movieR);
 		#$prep->bindParam(':genre', $movieG);
 		#$prep->bindParam(':type', $movieTy);
