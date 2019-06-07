@@ -22,8 +22,7 @@ if (isset($_SESSION['movieid'])) {
 #MOVIE
 if($_SESSION['table'] == 'movies') {
 	echo '<form action="movies.php" method="POST" >';
-	echo '<p>Movies</p>'
-
+	echo '<p>Movies</p>';
 		echo 'Title: <input type="text" value="' . $temporary['title'] .  '" name="movieTitle">';
 		echo 'Sub-Title: <input type="text" value="' . $temporary['subtitle'] . '" name="movieSubTitle">';
 
@@ -40,10 +39,10 @@ if($_SESSION['table'] == 'movies') {
 			}
 		}
 
-	echo '</select>'
+	echo '</select>';
 
 	#GENRE
-	echo '<select name="movieGenre">'
+	echo '<select name="movieGenre">';
 	foreach ($db->query('SELECT id, genre FROM genre WHERE media = 0') as $row)
 		{
 			if($temporary['genre'] = $row['id']) {
@@ -57,7 +56,7 @@ if($_SESSION['table'] == 'movies') {
 	echo '</select>';
 
 	#TYPE
-	echo '<select name="movieType">'
+	echo '<select name="movieType">';
 	foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 		{
 			if($temporary['type'] = $row['id']) {
@@ -70,7 +69,7 @@ if($_SESSION['table'] == 'movies') {
 	echo '</select>';
 
 	echo '<button><a href="./movies.php">View Movies</a></button>';
-	echo '<input type="submit" value="Submit">'
+	echo '<input type="submit" value="Submit">';
 	echo '</form>';
 }
 
