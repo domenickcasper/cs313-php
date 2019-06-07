@@ -186,7 +186,7 @@ if($_SESSION['table'] == 'music') {
 		}
 	echo '</select>';
 
-	echo '<input type="submit" name="updateMusic" value="Submit">';
+	echo '<input type="submit" name="updateMusic" value="Update">';
 	echo '</form>';
 }
 	if (isset($_SESSION['musicid'])) {
