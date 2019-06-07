@@ -139,8 +139,9 @@ if($_SESSION['table'] == 'video_games') {
 	echo '</form>';
 
 	if (isset($_SESSION['consoleid'])) {
-	unset($consoleid);
-	unset($temporary);
+		unset($consoleid);
+		unset($temporary);
+	}
 
 ?>
 
