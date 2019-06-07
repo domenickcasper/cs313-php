@@ -12,7 +12,6 @@ $temporary = -1;
 </head>
 <body>
 
-<div class="form">
 <!--Movie Form-->
 <form action="movies.php" method="POST" >
 <p>Movies</p>
@@ -126,8 +125,6 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 <button><a href="./music.php">View Music</a></button>
 <input type="submit" value="Submit">
 </form>
-
-<div>
 
 <br><br>
 <button><a href="home.php">Back to the Homepage</a></button>
