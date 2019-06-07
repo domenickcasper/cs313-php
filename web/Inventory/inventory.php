@@ -90,6 +90,7 @@ foreach ($db->query('SELECT id, console FROM console') as $row)
 ?>
 </select>
 
+<button><a href="./console.php">View Games</a></button>
 <input type="submit" value="Submit">
 </form>
 
