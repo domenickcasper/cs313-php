@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])){
 }
 if (isset($_POST['update'])) {
 	$_SESSION['movieid'] = $_POST['update'];
-	header("Location: inventory.php");
+	header("Location: update.php");
 	die();
 }
 if (isset($_POST)) {

@@ -11,13 +11,6 @@ $temporary = -1;
 	<link rel="stylesheet" href="./inventory.css">
 </head>
 <body>
-<?php
-if (isset($_SESSION['movieid'])) {
-	$movieid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['movieid']);
-	$temporary = $movieid->fetch();	
-	var_dump($temporary);
-}
-?>
 
 <!--Movie Form-->
 <form action="movies.php" method="POST" >
