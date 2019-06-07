@@ -17,6 +17,28 @@ if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM movies WHERE id =' . $_POST['delete']);
 	}
+	elseif (isset($_POST['updateMovies'])) {
+		$movieT = $_POST['movieTitle'];
+		$movieS = $_POST['movieSubTitle'];
+		$movieR = $_POST['movieRating'];
+		$movieG = $_POST['movieGenre'];
+		$movieTy = $_POST['movieType'];
+		$user = $_SESSION['id'];
+
+		$sql = 'UPDATE movies 
+				SET title = :title AND subtitle = :subtitle AND rating = :rating 
+					AND genre = :genre AND type = :type
+				WHERE id = ' . $_SESSION['movieid'];
+
+		$prep = $db->prepare($sql);
+		$prep->bindParam(':title', $movieT);
+		$prep->bindParam(':subtitle', $movieS);
+		$prep->bindParam(':rating', $movieR);
+		$prep->bindParam(':genre', $movieG);
+		$prep->bindParam(':type', $movieTy);
+
+		$prep->execute();
+	}
 	elseif (isset($_POST['movieTitle'])) {
 		$movieT = $_POST['movieTitle'];
 		$movieS = $_POST['movieSubTitle'];

@@ -69,7 +69,7 @@ if($_SESSION['table'] == 'movies') {
 	echo '</select>';
 
 	echo '<button><a href="./movies.php">View Movies</a></button>';
-	echo '<input type="submit" value="Submit">';
+	echo '<input type="submit" name="updateMovies" value="Submit">';
 	echo '</form>';
 }
 
@@ -145,7 +145,6 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 <input type="submit" value="Submit">
 </form>
 
-?>
 
 <button><a href="home.php">Back to the Homepage</a></button>
 <button><a href="signout.php">Sign Out</a></button>
