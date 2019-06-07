@@ -70,7 +70,9 @@ if (isset($_POST)) {
 </head>
 <body>
 <h1>Your Video Game Inventory</h1>
-<button class="button"><a href="inventory.php">Back to Inventory</a></button>
+<div class="button">
+	<button><a href="inventory.php">Back to Inventory</a></button><br><br>
+</div>
 
 <form method="POST" action="console.php">
 <table align="center">
