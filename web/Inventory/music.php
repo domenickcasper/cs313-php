@@ -18,7 +18,7 @@ if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM music WHERE id =' . $_POST['delete']);
 	}
-	elseif (isset($_POST['update'])) {	
+	elseif (isset($_POST['updateMusic'])) {	
 		$musicT = $_POST['musicTitle'];
 		$musicAr = $_POST['artist'];
 		$musicAl = $_POST['album'];
@@ -39,7 +39,7 @@ if (isset($_POST)) {
 
 		$prep->execute();
 	}
-	else {
+	elseif (isset($_POST['musicTitle'])){
 		$musicT = $_POST['musicTitle'];
 		$musicAr = $_POST['artist'];
 		$musicAl = $_POST['album'];
