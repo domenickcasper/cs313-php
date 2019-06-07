@@ -1,6 +1,10 @@
 <?php
 session_start();
 include 'database.php';
+if (!isset($_SESSION['id'])){
+	header("Location: signin.php");
+	die(); 
+}
 if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM movies WHERE id =' . $_POST['delete']);
@@ -30,6 +34,7 @@ if (isset($_POST)) {
 		$prep->execute();
 	}
 }
+
 ?>
 
 <!DOCTYPE html>
