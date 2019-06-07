@@ -48,8 +48,9 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 0') as $row)
 ?>
 </select>
 
-<button><a href="./movies.php">View Movies</a></button>
+
 <input type="submit" value="Submit">
+<button><a href="./movies.php">View Movies</a></button>
 </form>
 
 
@@ -90,8 +91,8 @@ foreach ($db->query('SELECT id, console FROM console') as $row)
 ?>
 </select>
 
-<button><a href="./console.php">View Games</a></button>
 <input type="submit" value="Submit">
+<button><a href="./console.php">View Games</a></button>
 </form>
 
 <!--Music Form-->
@@ -122,8 +123,8 @@ foreach ($db->query('SELECT id, type FROM type WHERE media = 2') as $row)
 ?>
 </select>
 
-<button><a href="./music.php">View Music</a></button>
 <input type="submit" value="Submit">
+<button><a href="./music.php">View Music</a></button>
 </form>
 
 <br><br>
