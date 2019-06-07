@@ -26,8 +26,7 @@ if (isset($_POST)) {
 		$user = $_SESSION['id'];
 
 		$sql = 'UPDATE movies 
-				SET title = :title
-				SET subtitle = :subtitle
+				SET title = :title, subtitle = :subtitle
 				WHERE id = ' . $_SESSION['movieid'];
 
 		$prep = $db->prepare($sql);
