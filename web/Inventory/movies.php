@@ -8,6 +8,11 @@ if (!isset($_SESSION['id'])){
 	header("Location: signin.php");
 	die(); 
 }
+if (isset($_POST['update'])) {
+	$_SESSION['movieid'] = $_POST['update'];
+	header("Location: inventory.php");
+	die();
+}
 if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM movies WHERE id =' . $_POST['delete']);

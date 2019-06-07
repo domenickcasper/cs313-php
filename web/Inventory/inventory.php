@@ -12,8 +12,8 @@ $temporary = -1;
 </head>
 <body>
 <?php
-if (isset($_POST['update'])) {
-	$movieid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_POST['update']);
+if (isset($_SESSION['movieid'])) {
+	$movieid = $db->query('SELECT * FROM ' . $_SESSION['table'] . ' WHERE id = ' . $_SESSION['movieid']);
 	$temporary = $movieid->fetch();	
 	var_dump($temporary);
 }
