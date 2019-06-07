@@ -72,7 +72,7 @@ if (isset($_POST)) {
 <body>
 <h1>Your Movie Inventory</h1>
 <div class="button">
-	<button><a href="inventory.php">Back to Inventory</a></button><br><br>
+	<button><a href="home.php">Back to Inventory</a></button><br><br>
 </div>
 
 <form method="POST" action="movies.php">
