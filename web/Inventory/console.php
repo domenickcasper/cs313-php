@@ -17,7 +17,7 @@ if (isset($_POST)) {
 	if (isset($_POST['delete'])) {
 		$db->query('DELETE FROM video_games WHERE id =' . $_POST['delete']);
 	}
-elseif (isset($_POST['updateConsole'])) {
+	elseif (isset($_POST['updateConsole'])) {
 		$vgT = $_POST['vgTitle'];
 		$vgST = $_POST['vgSubTitle'];
 		$vgR = $_POST['vgRating'];
@@ -36,10 +36,9 @@ elseif (isset($_POST['updateConsole'])) {
 		$prep->bindParam(':genre', $vgG);
 		$prep->bindParam(':console', $console);
 
-
 		$prep->execute();
 	}
-	else {
+	elseif (isset($_POST['vgTitle'])) {
 		$vgT = $_POST['vgTitle'];
 		$vgST = $_POST['vgSubTitle'];
 		$vgR = $_POST['vgRating'];
